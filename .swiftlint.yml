@@ -1,0 +1,25 @@
+disabled_rules:
+   - valid_docs
+   - function_parameter_count
+   - trailing_whitespace
+   - variable_name
+excluded:
+   - Pods
+   - Carthage
+   - Tools
+   - Scripts
+   - fastlane
+
+# Configurable
+
+cyclomatic_complexity:
+  - 15 # warning
+
+file_length:
+  - 500 # warning
+
+function_body_length:
+  - 150 # warning
+
+line_length:
+  - 150 # warning

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TappableLabelCell" customModule="TappableLabelView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-7I-87Z">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrY-Xv-GVT">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PrY-Xv-GVT" secondAttribute="bottom" id="GBZ-hZ-CFZ"/>
+                            <constraint firstItem="PrY-Xv-GVT" firstAttribute="top" secondItem="1h6-7I-87Z" secondAttribute="top" id="Jxg-io-x7M"/>
+                            <constraint firstItem="PrY-Xv-GVT" firstAttribute="leading" secondItem="1h6-7I-87Z" secondAttribute="leading" id="d7T-H7-eAg"/>
+                            <constraint firstAttribute="trailing" secondItem="PrY-Xv-GVT" secondAttribute="trailing" id="tBZ-s2-oy4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1h6-7I-87Z" secondAttribute="bottom" id="1q6-jF-7f6"/>
+                <constraint firstItem="1h6-7I-87Z" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2Fo-Ma-HWR"/>
+                <constraint firstAttribute="trailing" secondItem="1h6-7I-87Z" secondAttribute="trailing" id="Drd-ex-jNe"/>
+                <constraint firstItem="1h6-7I-87Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="h2Y-j9-2cr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="containerView" destination="1h6-7I-87Z" id="m0V-rl-0vG"/>
+                <outlet property="label" destination="PrY-Xv-GVT" id="nDL-qQ-UWq"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
