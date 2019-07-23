@@ -8,8 +8,15 @@
 
 import Foundation
 
+/// Description
 public protocol TappableLabelViewDelegate: class {
 
-    func didTap(text: String)
+    /// Will be invoked when a tappable text is tapped
+    ///
+    /// - Parameters:
+    ///   - text: Tapped text
+    ///   - indexInText: Tapped index in the provided text
+    ///   - index: Index of the provided tappable strings list
+    func didTap(text: String, indexInText: Int, index: Int)
 
 }

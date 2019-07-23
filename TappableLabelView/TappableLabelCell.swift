@@ -16,12 +16,13 @@ class TappableLabelCell: UICollectionViewCell {
     var textAttributes:  [NSAttributedString.Key: Any]?
 
     var cellHeight: CGFloat = 0
-    var bottomLine: CALayer?
+    private var bottomLine: CALayer?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
+    /// Sets the value to the label
+    ///
+    /// - Parameters:
+    ///   - value: Value to be set
+    ///   - isUnderlined: Specifies if the text should be underlined
     func set(_ value: String, isUnderlined: Bool) {
         guard let textAttributes = textAttributes else {
             return

@@ -36,16 +36,18 @@ public class TappableLabelView: UIView {
                 return
             }
             indexes = []
-            for tappableString in tappableStrings {
-                let newIndexes: [Int] = textArray.enumerated().filter({ tappableString == $0.element }).map({
-                    return $0.offset
+            for tappableString in tappableStrings.enumerated() {
+                let newIndexes: [Int: Int] = textArray.enumerated().filter({ tappableString.element == $0.element }).reduce([:], { (dict, element) -> [Int: Int] in
+                    var dict = dict
+                    dict[element.offset] = tappableString.offset
+                    return dict
                 })
-                indexes.append(contentsOf: newIndexes)
+                indexes.append(newIndexes)
             }
         }
     }
 
-    private var indexes: [Int] = []
+    private var indexes: [[Int: Int]] = []
 
     private var textArray: [String] = []
 
@@ -100,9 +102,14 @@ public class TappableLabelView: UIView {
         collectionView.registerNibForCells([TappableLabelCell.self])
         collectionView.reloadData()
     }
+    
+    private func textIndex(at index: Int) -> Int? {
+        return indexes.filter({ $0[index] != nil }).first?[index]
+    }
 
 }
 
+// MARK: - UICollectionViewDataSource
 extension TappableLabelView: UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -112,13 +119,20 @@ extension TappableLabelView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: TappableLabelCell = collectionView.dequeueCell(forIndexPath: indexPath)
         cell.cellHeight = cellHeight
-        cell.textAttributes = options?.textAttributes
-        cell.set(textArray[indexPath.row], isUnderlined: indexes.contains(indexPath.row))
+        let tappableText = textIndex(at: indexPath.row)
+        cell.textAttributes = tappableText != nil ? options?.highlightedTextAttributes : options?.textAttributes
+        var isUnderline = options?.isUnderline ?? false
+        if isUnderline {
+            isUnderline = tappableText != nil
+        }
+
+        cell.set(textArray[indexPath.row], isUnderlined: isUnderline)
         return cell
     }
 
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension TappableLabelView: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
@@ -129,8 +143,8 @@ extension TappableLabelView: UICollectionViewDelegateFlowLayout {
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexes.contains(indexPath.row) {
-            options?.delegate?.didTap(text: textArray[indexPath.row])
+        if let selectedItem = textIndex(at: indexPath.row) {
+            options?.delegate?.didTap(text: textArray[indexPath.row], indexInText: indexPath.row, index: selectedItem)
         }
     }
 
