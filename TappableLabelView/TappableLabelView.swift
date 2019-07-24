@@ -26,7 +26,9 @@ public class TappableLabelView: UIView {
                 return
             }
             textArray = text?.components(separatedBy: " ") ?? []
-            collectionView.reloadData()
+            if let collectionView = collectionView {
+               collectionView.reloadData()
+            }
         }
     }
 
@@ -51,13 +53,18 @@ public class TappableLabelView: UIView {
 
     private var textArray: [String] = []
 
-    override public init(frame: CGRect) {
+    public init(frame: CGRect, options: ConfigurationOptions) {
         super.init(frame: frame)
-        setuSubViews()
+        self.options = options
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setuSubViews()
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         setuSubViews()
     }
 
@@ -144,7 +151,10 @@ extension TappableLabelView: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let selectedItem = textIndex(at: indexPath.row) {
-            options?.delegate?.didTap(text: textArray[indexPath.row], indexInText: indexPath.row, index: selectedItem)
+            options?.delegate?.didTap(tappableLabelView: self,
+                                      text: textArray[indexPath.row],
+                                      indexInText: indexPath.row,
+                                      index: selectedItem)
         }
     }
 

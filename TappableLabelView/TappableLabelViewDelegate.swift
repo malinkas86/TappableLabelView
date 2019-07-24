@@ -14,9 +14,10 @@ public protocol TappableLabelViewDelegate: class {
     /// Will be invoked when a tappable text is tapped
     ///
     /// - Parameters:
+    ///   - tappableLabelView: Relavant tappable label view
     ///   - text: Tapped text
     ///   - indexInText: Tapped index in the provided text
     ///   - index: Index of the provided tappable strings list
-    func didTap(text: String, indexInText: Int, index: Int)
+    func didTap(tappableLabelView: TappableLabelView, text: String, indexInText: Int, index: Int)
 
 }
