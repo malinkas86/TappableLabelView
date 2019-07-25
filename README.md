@@ -13,7 +13,7 @@
 - [x] Customizable highlighted text styling.
 - [x] Customizable text alignment.
 - [x] Handling scenarios with multiple occurrences of the exact same string.
-- [x] Multiple **TappableLabelView**s could be in a single file and yet, the events can be handled separately.
+- [x] Multiple **TappableLabelView**s could be in a single file can be handled separately.
 
 ### Installation
 
@@ -43,7 +43,7 @@ import TappableLabelView
 	 - wordSpacing - Spacing between the words.
 	 - lineSpacing - Spacing between the text lines.
  4. Provide the *text* to be displayed.
- 5. Provide the list of tappable strings as an array. - Please make sure the all the punctuations related to a particular word, should also be included as part of the tappable string.
+ 5. Provide the list of tappable strings as an array. - Please make sure that all the punctuations related to a particular word, should also be included as part of the tappable string.
  
 ## Implementing programmatically
 
