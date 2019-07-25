@@ -13,7 +13,7 @@
 - [x] Customizable highlighted text styling.
 - [x] Customizable text alignment.
 - [x] Handling scenarios with multiple occurrences of the exact same string.
-- [x] Multiple **TappableLabelView**s could be in a single file can be handled separately.
+- [x] Multiple **TappableLabelView**s in a single file can be handled separately.
 
 ### Installation
 
