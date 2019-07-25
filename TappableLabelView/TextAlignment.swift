@@ -10,6 +10,6 @@ import Foundation
 
 public enum TextAlignment {
     case left
-    case center
+    case justified
     case right
 }
