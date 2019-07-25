@@ -12,10 +12,10 @@ import Foundation
 public class ConfigurationOptions {
 
     /// Regular Text attributes
-    public let textAttributes: [NSAttributedString.Key: Any]
+    public var textAttributes: [NSAttributedString.Key: Any]
     
     /// Highlighted text attributes
-    public let highlightedTextAttributes: [NSAttributedString.Key: Any]
+    public var highlightedTextAttributes: [NSAttributedString.Key: Any]
     
     /// Text alignment
     public let alignment: TextAlignment
@@ -40,7 +40,11 @@ public class ConfigurationOptions {
                 lineSpacing: CGFloat = 6,
                 delegate: TappableLabelViewDelegate) {
         self.textAttributes = textAttributes
+        self.textAttributes.removeValue(forKey: NSAttributedString.Key.underlineStyle)
+        self.textAttributes.removeValue(forKey: NSAttributedString.Key.underlineColor)
         self.highlightedTextAttributes = highlightedTextAttributes
+        self.highlightedTextAttributes.removeValue(forKey: NSAttributedString.Key.underlineStyle)
+        self.highlightedTextAttributes.removeValue(forKey: NSAttributedString.Key.underlineColor)
         self.alignment = alignment
         self.isUnderline = isUnderline
         self.wordSpacing = wordSpacing
