@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '12.0'
 s.name = "TappableLabelView"
-s.summary = "TappableLabelView lets a user select an ice cream flavor."
+s.summary = "TappableLabelView is a component that helps you to have s string as long as you wish, with tappable areas. It provides you the flexibility to customize with the text alignment, text style and many others to make your life easy."
 s.requires_arc = true
 
 # 2
@@ -20,7 +20,7 @@ s.author = { "Malinka Seneviratne" => "malinkas86@gmail.com" }
 s.homepage = "https://github.com/TheCodedSelf/RWPickFlavor"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/TheCodedSelf/RWPickFlavor.git", 
+s.source = { :git => "https://github.com/malinkas86/TappableLabelView", 
              :tag => "#{s.version}" }
 
 # 7
@@ -33,6 +33,6 @@ s.source_files = "TappableLabelView/**/*.{swift}"
 s.resources = "TappableLabelView/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
-s.swift_version = "4.2"
+s.swift_version = "5.0"
 
 end
