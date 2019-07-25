@@ -8,12 +8,12 @@
 
 # New Features!
 
- [x] A lengthy string as long as you need.
- [x] Customizable text styling.
- [x] Customizable highlighted text styling.
- [x] Customizable text alignment.
- [x] Handling scenarios with multiple occurrences of the exact same string.
- [x] Multiple **TappableLabelView**s could be in a single file and yet, the events can be handled separately.
+- [x] A lengthy string as long as you need.
+- [x] Customizable text styling.
+- [x] Customizable highlighted text styling.
+- [x] Customizable text alignment.
+- [x] Handling scenarios with multiple occurrences of the exact same string.
+- [x] Multiple **TappableLabelView**s could be in a single file and yet, the events can be handled separately.
 
 ### Installation
 
