@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '12.0'
 s.name = "TappableLabelView"
-s.summary = "TappableLabelView is a component that helps you to have s string as long as you wish, with tappable areas. It provides you the flexibility to customize with the text alignment, text style and many others to make your life easy."
+s.summary = "A view to add a string and handle tap events."
 s.requires_arc = true
 
 # 2
@@ -17,10 +17,10 @@ s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Malinka Seneviratne" => "malinkas86@gmail.com" }
 
 # 5 - Replace this URL with your own GitHub page's URL (from the address bar)
-s.homepage = "https://github.com/TheCodedSelf/RWPickFlavor"
+s.homepage = "https://github.com/malinkas86/TappableLabelView"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/malinkas86/TappableLabelView", 
+s.source = { :git => "https://github.com/malinkas86/TappableLabelView.git", 
              :tag => "#{s.version}" }
 
 # 7
