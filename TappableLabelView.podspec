@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '12.0'
 s.name = "TappableLabelView"
-s.summary = "A view to add a string and handle tap events."
+s.summary = "customizable and lightweight library that makes the task of displaying a lengthy text with tappable strings, as easy as you would like"
 s.requires_arc = true
 
 # 2

@@ -4,11 +4,11 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](http://cocoapods.org/pods/TappableLabelView)
 [![License](https://img.shields.io/badge/license-MIT-red)](http://cocoapods.org/pods/TappableLabelView)
 
-**TappableLabelView** is a component that helps you to have s string as long as you desire, with specific strings that could be tapped. It gives you the flexibility to customize attributes such as *text alignment*, *text styling* etc.
+**TappableLabelView** is an extremely customizable and lightweight library that makes the task of displaying a lengthy text with tappable strings, as easy as you would like.
 
 |Standard Text Version|Underlined Text Version|
 |--|--|
-| ![Standard Text Version](https://media.giphy.com/media/lSnZHsN1dZM00HSHV9/giphy.gif) | ![Underlined Text Version](https://giphy.com/gifs/l3aAYFfDOTjPc2OVST/html5) |
+| ![Standard Text Version](https://media.giphy.com/media/lSnZHsN1dZM00HSHV9/giphy.gif) | ![Underlined Text Version](https://media.giphy.com/media/TFHPXqeXpIXuK3Bv8u/giphy.gif) |
 
 # New Features!
 
@@ -95,12 +95,12 @@ import TappableLabelView
  - Set options explicitly in `viewDidLoad()`.
 ```swift        
 tappableLabelView.options =  ConfigurationOptions(textAttributes: textStyle.attributes,
-                                           highlightedTextAttributes: highlightedTextStyle.attributes,
-                                           alignment: .left,
-                                           isUnderline: true,
-                                           wordSpacing: 5,
-                                           lineSpacing: 6,
-                                           delegate: self)
+                                                 highlightedTextAttributes: highlightedTextStyle.attributes,
+                                                 alignment: .left,
+                                                 isUnderline: true,
+                                                 wordSpacing: 5,
+                                                 lineSpacing: 6,
+                                                 delegate: self)
 tappableLabelView.text = "Tappable text"
 tappableLabelView.tappableStrings = ["text", "Tappable"]
 ```
