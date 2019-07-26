@@ -8,7 +8,7 @@
 
 |Standard Text Version|Underlined Text Version|
 |--|--|
-| ![Standard Text Version](https://giphy.com/gifs/lSnZHsN1dZM00HSHV9/html5) | ![Underlined Text Version](https://giphy.com/gifs/l3aAYFfDOTjPc2OVST/html5) |
+| ![Standard Text Version](https://media.giphy.com/media/lSnZHsN1dZM00HSHV9/giphy.gif) | ![Underlined Text Version](https://giphy.com/gifs/l3aAYFfDOTjPc2OVST/html5) |
 
 # New Features!
 
