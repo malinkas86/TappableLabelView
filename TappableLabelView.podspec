@@ -8,7 +8,7 @@ s.summary = "customizable and lightweight library that makes the task of display
 s.requires_arc = true
 
 # 2
-s.version = "1.0.0"
+s.version = "1.1.0"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
