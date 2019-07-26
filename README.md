@@ -4,21 +4,36 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](http://cocoapods.org/pods/TappableLabelView)
 [![License](https://img.shields.io/badge/license-MIT-red)](http://cocoapods.org/pods/TappableLabelView)
 
-**TappableLabelView** is a component that helps you to have s string as long as you wish, with tappable areas. It provides you the flexibility to customize with the *text alignment*, *text style* and many others to make your life easy.
+**TappableLabelView** is a component that helps you to have s string as long as you desire, with specific strings that could be tapped. It gives you the flexibility to customize attributes such as *text alignment*, *text styling* etc.
+
+|Standard Text Version|Underlined Text Version|
+|--|--|
+| ![Standard Text Version](https://giphy.com/gifs/lSnZHsN1dZM00HSHV9/html5) | ![Underlined Text Version](https://giphy.com/gifs/l3aAYFfDOTjPc2OVST/html5) |
 
 # New Features!
 
-- [x] A lengthy string as long as you need.
+- [x] A lengthy string as long as you desire.
 - [x] Customizable text styling.
 - [x] Customizable highlighted text styling.
 - [x] Customizable text alignment.
 - [x] Handling scenarios with multiple occurrences of the exact same string.
 - [x] Multiple **TappableLabelView**s in a single file can be handled separately.
 
+## Requirements
+
+ - iOS 10.0+
+ - Xcode 10.2+
+
 ### Installation
 
-Add to your pod file
-`pod 'TappableLabelView'`
+### CocoaPods
+
+TappableLabelView is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'TappableLabelView'
+```
 
 Install the dependencies.
 
@@ -26,7 +41,7 @@ Install the dependencies.
 $ pod install
 ```
 
-Import the module in the relevant file.
+Then add the following at the top of each file you use TappableLabelView in your project.
 ```swift
 import TappableLabelView
 ```
@@ -92,7 +107,7 @@ tappableLabelView.tappableStrings = ["text", "Tappable"]
 
 
 ## Handling tap events
-Implement the delegate method to handle events.
+Conform the class to `TappableLabelViewDelegate` and implement `didTap` function where events can be handled as shown below..
 ### Parameters
 - tappableLabelView - Relevent `tappableLabelView` which was tapped (in scenarios where multiple tappable label views are used in a single view).
 - text - Tapped text.
